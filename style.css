@@ -1,0 +1,1026 @@
+/* Header Layout */
+.main-header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 1rem 5% 2rem;
+  border-bottom: 1px solid #312f2f;
+  gap: clamp(20px, 4vw, 60px);
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.brand-text {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-synthesis: none;
+  font-size: clamp(18px, 4vw, 30px);
+  justify-self: start;
+  grid-column: 1;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  word-spacing: -1px;
+  margin-left: -50px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.main-nav {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  grid-column: 2;
+}
+
+.menu-close{
+  display: none;
+}
+
+.nav-link {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #666;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.telegram-wrapper {
+  justify-self: end;
+  grid-column: 3;
+  margin-right: 250px;
+}
+
+.telegram-icon {
+  max-width: 30px;
+  height: auto;
+  display: block;
+}
+
+
+.hero {
+  background-color: #ffffff;
+  padding: 100px 20px;
+  padding-bottom: 120px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.hero-headline {
+  font-family: Helvetica Light, Arial, sans-serif;
+  font-size: clamp(35px, 6vw, 45px);
+  font-weight: 500;
+  color: #000;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.3;
+  letter-spacing: -1.5px;
+  word-spacing: -2px;
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  grid-column: 3;
+  justify-self: end;
+}
+
+.underline-accent {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-accent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* moves the line below the text */
+  width: clamp(60px, 15vw, 100px);
+  height: 3px; /* thickness of underline */
+  background-color: #32ec2d; /* green line */
+  border-radius: 20px;
+  margin-left: -10px;
+}
+
+.about-section{
+  max-width: clamp(300px, 90%, 1200px);
+  margin: 0 auto 3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(14px, 1.6vw, 20px);
+  line-height: 1.6;
+  margin-bottom: 2.2em;
+  transition: opacity 0.3s ease;
+}
+
+
+/* Big Post Styles - Updated for responsive scaling */
+.big-post {
+  margin-bottom: 4rem;
+}
+
+.big-post-content {
+  display: flex;
+  gap: -2rem;
+  margin: 0 auto;
+  max-width: min(1550px, 90%);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.image-right .big-post-content {
+  flex-direction: row-reverse;
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+
+.big-post-image {
+  flex: 0 0 min(700px, 60%);
+  height: min(850px, 85vh);
+  position: relative;
+}
+
+.big-post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.big-post-meta {
+  color: #666;
+  font-size: 24px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+
+.big-post-title {
+  font-size: clamp(28px, 4vw, 60px);
+  margin: 1rem 0;
+  font-weight: 300;
+  line-height: 1.2;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+
+.big-post-summary {
+  font-size: clamp(12px, 2vw, 20px);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.big-post-button {
+  display: inline-block;
+  padding: 14px 50px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+.big-post-button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Grid Post Styles - Updated for responsive scaling */
+.grid-posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 5rem;
+  margin: 4rem auto 0;
+  max-width: min(1400px, 90%);
+  padding: 0 1rem;
+}
+
+.grid-post {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: #666;
+
+}
+
+.grid-post-meta {
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.grid-post-image {
+  width: 100%;
+  height: min(388px, 40vw);
+  overflow: hidden;
+  border-radius: 30px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.grid-post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.grid-post-title {
+  font-size: clamp(20px, 2.5vw, 25px);
+  margin: 1rem 0 0.5rem;
+  line-height: 1.3;
+  font-size: 28px;
+  font-style: italic;
+  color: #000;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+.grid-post-summary {
+  font-size: clamp(14px, 1.8vw, 18px);
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 5rem;
+}
+
+.grid-post-button {
+  display: inline-block;
+  padding: 14px 50px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 3rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-post-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.fade-animation {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+
+/*----------- This will center everything in the grid post---------------------------*/
+
+
+
+/* Category Labels */
+.post-category {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  background-color: #32ec2d;
+  color: black;
+  font-family:'Times New Roman', Times, serif;
+  font-size: clamp(12px, 1.2vw, 20px);
+  font-style: italic;
+  text-transform: uppercase;
+  padding: 9px 15px;
+  display: inline-block;
+  z-index: 2
+}
+
+
+
+/* Single Post Styles */
+.single-post {
+  max-width: min(1100px, 92%);
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.single-post-image-container {
+  margin: 0 auto 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.single-post-image {
+  width: 100%;
+  height: min(600px, 50vh);
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.single-post-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* Three equal columns*/
+  max-width: 1100px;
+  margin: 0 auto 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 22px;
+  color: #666;
+  margin-bottom: 4rem;
+  margin-top: -1.5rem;
+}
+
+.meta-left {
+  text-align: left;
+}
+
+.meta-center {
+  text-align: center;
+}
+
+.meta-right {
+  text-align: right;
+}
+
+.meta-separator {
+  opacity: 0.6;
+}
+
+.single-post-title {
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: clamp(32px, 5vw, 55px);
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 6rem;
+  font-weight: 500;
+}
+
+
+.single-post-content {
+  max-width: clamp(300px, 90%, 1200px);
+  margin: 0 auto 3rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(14px, 1.6vw, 20px);
+  line-height: 1.6;
+  margin-bottom: 2.2em;
+  transition: opacity 0.3s ease;
+
+  position: relative;
+  padding-left: 50px; /* space between line and text */
+  border-left: 1px solid #000; /* or any color you want */
+}
+
+/* Loading content transitions */
+.loading-content {
+  opacity: 0;
+}
+
+.loaded-content {
+  opacity: 1;
+}
+
+.loading-indicator {
+  text-align: center;
+  padding: 2rem;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top-color: #3498db;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.single-post-content p {
+  margin-bottom: 1.5rem;
+}
+
+.single-post-summary {
+  background: #f8f8f8;
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 3rem 0;
+}
+
+.single-post-summary h3 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+/* Container for the additional posts grid */
+.additional-posts-grid {
+  max-width: 1100px;
+  margin: 5rem auto 0;  /* 5rem top margin, auto side margins to center */
+  text-align: center;
+  width: 100%;
+  padding: 0;
+}
+
+/* Heading for the grid section */
+.additional-posts-grid h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  margin: 2rem 0;
+  justify-content: center;
+  font-weight: 500;
+  font-style: italic;
+  text-decoration:underline
+}
+
+/* Grid container for the individual grid posts */
+.additional-grid {
+  display: grid;
+  grid-template-columns: repeat(3, clamp(300px, 25vw, 417px));
+  gap: 6rem;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+/* Grid post image: scales properly and keeps rounded corners */
+.additional-grid .grid-post-image {
+  width: 100%;
+  height: clamp(300px, 40vw, 388px);
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+/* Grid post title and summary scaling */
+.additional-grid .grid-post-title {
+  font-size: clamp(10px, 2.5vw, 25px);
+  font-style: italic;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.additional-grid .grid-post-summary {
+  font-size: clamp(5px, 1.8vw, 18px);
+}
+
+.additional-grid .grid-post-meta {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive adjustments for devices up to 1024px wide */
+@media (max-width: 1024px) {
+  .additional-grid {
+    grid-template-columns: repeat(2, clamp(250px, 45vw, 350px));
+    gap: 4rem;
+  }
+}
+
+/* Extra responsive styling for very small devices (optional) */
+@media (max-width: 600px) {
+  .additional-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .single-post {
+    margin: 2rem auto;
+  }
+
+  .single-post-image {
+    height: 40vh;
+  }
+
+  .single-post-title {
+    font-size: 28px;
+  }
+
+  .single-post-content {
+    font-size: 16px;
+  }
+
+  .big-post-content {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+
+
+  .big-post-image {
+    width: 100%;
+    height: auto;
+    flex: none;
+    aspect-ratio: 4/3;
+  }
+
+  .grid-posts-container {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-post-image {
+    height: 50vw;
+  }
+
+  .big-post-title {
+    font-size: 28px;
+  }
+
+  .grid-post-title {
+    font-size: 22px;
+  }
+
+  .grid-posts-container {
+    gap: 1.5rem;
+    padding: 0 15px;
+  }
+
+  .additional-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Added media query for larger screens */
+@media (min-width: 1600px) {
+  .big-post-image {
+    flex: 0 0 45%;
+  }
+
+  .big-post-text {
+    /*flex: 0 0 50%; <-- it was only this before!*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Ensures text is centered */
+    width: 100%;
+    max-width: 600px; /* Restrict width for readability */
+    margin: 5rem; /* Ensures centering in all breakpoints */
+  }
+}
+
+/* Media Query for tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .big-post-text {
+    max-width: 500px; /* Slightly smaller width for better layout */
+  }
+}
+
+/* Media Query for phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .big-post-content {
+    flex-direction: column !important; /* Stacks image and text vertically */
+    gap: 2rem;
+  }
+
+  .big-post-text {
+    max-width: 90%; /* Full width for mobile */
+    padding: 0 1rem; /* Add padding for readability */
+  }
+}
+
+.posts-container {
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.posts-container.fade-animation {
+  opacity: 0;
+}
+
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.about-article {
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+  margin-bottom: 2rem;
+}
+
+.about-article h2 {
+  font-size: 1.5rem;
+  margin: 1.8rem 0 1rem;
+  color: #333;
+}
+
+.about-article ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+
+/* From here on is the footer---------------------------------------------------------------------------------*/
+
+/* Footer Layout */
+.main-footer {
+  background-color: #ffffff;
+  /* Light background for contrast */
+  padding: 0rem 5%;
+  border-top: 1px solid #312f2f;
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 10px;
+  margin-top: 5rem;
+  /* adds space beteween the footer and the content above*/
+
+}
+
+/* Footer Grid */
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  /* Ensures even spacing */
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  gap: 2rem;
+}
+
+/* Left: Branding & Logo */
+.footer-branding {
+  display: flex;
+  flex-direction: center;
+  gap: 20px;
+}
+
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  /* Fixed width for the logo container */
+  height: auto;
+}
+
+.footer-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Center text vertically */
+  text-align: center;
+  /* Ensure text is centered */
+}
+
+.footer-brand-line {
+  color: #000;
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Center: Privacy Policy & Copyright */
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.privacy-link:hover {
+  font-style: italic;
+}
+
+.privacy-link {
+  color: #000;
+}
+
+/* Right: Navigation Menu */
+.footer-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-link {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #666;
+  background-color: #e8e8e8;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-grid {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footer-branding {
+    align-items: center;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Reduce logo container size */
+  .footer-logo-container {
+    width: 80px; /* adjust as needed */
+  }
+
+  /* Ensure the logo image scales down appropriately */
+  .footer-logo {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Make the company name smaller */
+  .footer-brand-line {
+    font-size: 24px; /* adjust as needed; originally 32px */
+  }
+
+  .footer-branding {
+    gap: 50px
+  }
+
+  .privacy-link {
+    margin-top: 30px;
+  }
+}
+
+
+/* FOR THE PHONE FORMAT ----------------------------------------------*/
+
+@media (max-width: 768px) {
+  .main-header {
+    display: grid;
+    grid-template-areas: 
+      "brand telegram menu";
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    padding: 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 0.5rem;
+  }
+
+  /* Mobile navigation toggle styles */
+  .main-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    flex-direction: column;
+    padding: 2rem;
+    z-index: 1000;
+    transform: translateX(100%);
+    /*transition: transform 0.3s ease;*/ 
+    width: 100vw;
+    height: 100vh;
+
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .main-nav.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 4rem 0;
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .menu-close {
+    display:block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 10px;
+    color: #000;
+  }
+
+  .menu-close:hover {
+    opacity: 0.8;
+  }
+
+
+  .main-nav .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .menu-button {
+    display: block !important;
+  }
+
+  .brand-text {
+    grid-area: brand;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 0;  /* Remove desktop offset */
+    white-space: nowrap;
+  }
+
+  .telegram-wrapper {
+    grid-area: telegram;
+    justify-self: center;
+    margin-right: 1rem;  /* Remove any desktop-specific margin */
+  }
+
+  .menu-button {
+    grid-area: menu;
+    display: block !important;  /* Force it visible on mobile */
+    font-size: 26px;
+    padding: 5px; /*makes the clickable are bigger*/
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;  /* Set a visible text color */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .big-post-content {
+    max-width: 100%;
+    padding: 0 1rem;
+    gap: 2rem; /* Ensure proper spacing when stacked vertically */
+  }
+
+  .big-post-image {
+    width: 100%;
+    height: auto;
+    min-height: 450px; /* Increase this value as needed */
+    aspect-ratio: 16/9; /* Or choose another ratio for your design */
+  }
+
+  .big-post-meta {
+    margin-top: -1px;
+    font-size: 20px;
+  }
+
+
+  .big-post-title {
+    font-size: 40px;
+  }
+
+  .big-post-summary {
+    font-size: 17px;
+  }
+
+  .image-right .big-post-content {
+    margin-top: 100px;
+  }
+  
+  .grid-posts-container {
+    margin-top: 20px;
+  }
+
+
+  .grid-post-meta{
+    font-size: 20px;
+  }
+
+  .grid-post-image {
+    height: 350px ;
+  }
+
+  .grid-post-title {
+    font-size: 26px;
+  }
+
+  .grid-post-summary {
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+
+  .grid-post-button {
+    margin-bottom: 60px;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .single-post-image-container {
+    border-radius: 25px;
+  }
+
+  .single-post-image{
+    height: 250px;
+    width: 100%;
+  }
+
+  .single-post-meta {
+    font-size: 18px;
+    grid-template-columns: 1fr;  /* Single column layout */
+    grid-template-rows: auto auto auto; /* Three rows if needed */
+    gap: 0.5rem; /* Optional: adjust spacing between rows */
+    justify-items: center;       /* Center items horizontally */
+    align-items: center;         /* Center items vertically */
+    text-align: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+  }
+
+  .single-post-title {
+    font-size: 40px;
+  }
+
+  .additional-grid {
+    margin-top: 3rem;
+  }
+
+  .additional-grid .grid-post-meta {
+    font-size: 20px;
+  }
+
+  .additional-grid .grid-post-image{
+    height: 350px ;
+  }
+
+  .additional-grid .grid-post-title {
+    font-size: 26px;
+  }
+
+  .additional-grid .grid-post-summary {
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+
+  .additional-grid .grid-post-button {
+    margin-bottom: 20px;
+  }
+
+}
